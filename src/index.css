@@ -56,25 +56,22 @@ body {
   padding: 0;
 }
 
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
+.squares {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
 }
 
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
+.square {
+  border: none;
+  background-color: aliceblue;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 4rem;
+  height: 4rem;
+  width: 4rem;
+  text-align: center;
 }
 
 .status {
@@ -87,4 +84,18 @@ body {
 
 .game-info {
   margin-left: 20px;
+}
+
+.game-info ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 4rem;
+  list-style-type: none;
+}
+
+.move-button {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: aliceblue;
 }

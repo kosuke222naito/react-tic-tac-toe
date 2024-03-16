@@ -23,7 +23,9 @@ const Game = () => {
     description += move > 0 ? "move #" + move : "game start";
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button className="move-button" onClick={() => jumpTo(move)}>
+          {description}
+        </button>
       </li>
     );
   });
